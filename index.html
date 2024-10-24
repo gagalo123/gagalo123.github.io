@@ -1,16 +1,180 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <title></title>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+  <script>
+    $(()=> {
+      $(window).scroll( () => {
+        var windowTop = $(window).scrollTop();
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        if(windowTop > 122) {
+          $('nav').addClass('navShadow');
+
+          $('nav').addClass('nav_inner_logo');
+
+          if(screenWidth >860) {
+            $('#brand').addClass('brand_inner')
+            $('#nav_line').css('display', 'none')
+            $('#menu').addClass('menu_inner');
+            $('ul').addClass('ul_inner');
+            $('#nav-order-now').addClass('nav-order-now_inner')
+          } else {
+            // $('ul').addClass('showMenu_inner');
+          }
 
 
-    <script type="module" crossorigin src="/assets/index-C_0GEEL6.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-dUWvO4a5.css">
-  </head>
-  <body>
-    <div id="app"></div>
-  </body>
+          $('#menu-toggle').css('top', '22px');
+        } else {
+          $('nav').removeClass('navShadow');
+          $('nav').removeClass('nav_inner_logo');
+
+
+
+          if(screenWidth >860) {
+            $('#brand').removeClass('brand_inner')
+            $('#nav_line').css('display', 'block');
+            $('#menu').removeClass('menu_inner');
+            $('ul').removeClass('ul_inner');
+            $('#nav-order-now').removeClass('nav-order-now_inner')
+          } else {
+            // $('ul').removeClass('showMenu_inner');
+          }
+
+          $('#menu-toggle').css('top', '45px');
+        }
+
+      });
+      $('#menu-toggle').on('click', ()=> {
+        $('#menu-toggle').toggleClass('closeMenu');
+        $('ul').toggleClass('showMenu');
+
+      });
+
+      //Smooth Scrolling Using Navigation Menu
+      $('a[href*="#"]').on('click', function(e){
+        $('html,body').animate({
+          scrollTop: $($(this).attr('href')).offset().top - 100
+        },500);
+        e.preventDefault();
+      });
+    });
+
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<header >
+  <nav>
+    <div id="brand">
+      <div id="logo"></div>
+    </div>
+    <div id="nav_line"></div>
+    <div id="menu">
+      <div id="menu-toggle">
+        <div id="menu-icon">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <ul>
+        <li><a href="#section00">HOME</a></li>
+        <li><a href="#section01">ORDER NOW</a></li>
+        <li><a href="#section02">CONTACT</a></li>
+<!--        <li><a href="#section03">4</a></li>-->
+<!--        <li><a href="#section00">HOME</a></li>-->
+<!--        <li><a href="#section01">ORDER NOW</a></li>-->
+<!--        <li><a href="#section02">CONTACT US</a></li>-->
+<!--        <li><a href="#section03">GOOD</a></li>-->
+      </ul>
+          <div id="nav-order-now">
+              ORDER NOW
+          </div>
+    </div>
+
+  </nav>
+  <div id="header_fit" style="background: #232d1f"></div>
+  <div id="section00">
+    <div class="section00_block">
+      <img id="section00_text" src="img/Welcome%20to%20Bao%20Redwo.png"></img>
+      <div class="page-order-now">
+        ORDER NOW
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="section01">
+  <div style="width: 50%; display: flex; justify-content: center; align-items: center;">  <img id="section01_cover" src="img/section01_cover.png"/></div>
+  <div style="width: 50%"><img id="section01_rightBottom" src="img/section01_rightBottom.png" /></div>
+
+
+
+</section>
+<section id="section02">
+
+  <img id="section02_text" src="img/section02_text.png"/>
+  <div id="section02_text_body"><p>Bao Redwood City treasures the atmosphere just as much as the dining <br>
+          menu. We assembled as strong team of professionals, all of whom aspire <br>
+          to constantly excel and step it up !
+  </p></div>
+</section>
+<section id="section03">
+  <div id="section03_title">
+    TOP RATED MEALS
+  </div>
+  <div id="section03_img_container">
+    <div><img class="section03_item_img" src="img/item01.png"/><div class="section03_item_title">ITEM1</div></div>
+    <div><img class="section03_item_img" src="img/item02.png"/><div class="section03_item_title">ITEM2</div></div>
+    <div><img class="section03_item_img" src="img/item03.png"/><div class="section03_item_title">ITEM3</div></div>
+    <div><img class="section03_item_img" src="img/item04.png"/><div class="section03_item_title">ITEM4</div></div>
+    <div><img class="section03_item_img" src="img/item05.png"/><div class="section03_item_title">ITEM5</div></div>
+    <div><img class="section03_item_img" src="img/item06.png"/><div class="section03_item_title">ITEM6</div></div>
+    <div><img class="section03_item_img" src="img/item07.png"/><div class="section03_item_title">ITEM7</div></div>
+    <div><img class="section03_item_img" src="img/item08.png"/><div class="section03_item_title">ITEM8</div></div>
+    <div><img class="section03_item_img" src="img/item09.png"/><div class="section03_item_title">ITEM9</div></div>
+<!--    <div><img class="section03_item_img" src="img/item01.png"/><div class="section03_item_title">item1</div></div>-->
+<!--    <div><img class="section03_item_img" src="img/item02.png"/><div class="section03_item_title">item2</div></div>-->
+<!--    <div><img class="section03_item_img" src="img/item03.png"/><div class="section03_item_title">item3</div></div>-->
+<!--    <div><img class="section03_item_img" src="img/item03.png"/><div class="section03_item_title">item3</div></div>-->
+<!--    <div><img class="section03_item_img" src="img/item03.png"/><div class="section03_item_title">item3</div></div>-->
+<!--    <div><img class="section03_item_img" src="img/item03.png"/><div class="section03_item_title">item3</div></div>-->
+<!--    <div><img class="section03_item_img" src="img/item03.png"/><div class="section03_item_title">item3</div></div>-->
+<!--    <div><img class="section03_item_img" src="img/item03.png"/><div class="section03_item_title">item3</div></div>-->
+<!--    <div><img class="section03_item_img" src="img/item03.png"/><div class="section03_item_title">item3</div></div>-->
+  </div>
+</section>
+<section id="section04">
+  <div id="section04_title">
+    CONTACT US
+  </div>
+  <div id="section04_contact_us">
+    <div id="section04_contact_us_left">
+      Address&Tel <br>
+      560 Balboa Street San Francisco, CA 94118 <br>
+      415-742-4392
+    </div>
+    <div id="section04_contact_us_right">
+      Business Hour:<br>
+      Lunch 10:30am-02:30pm<br>
+      Dinner 05:00-11:59pm
+    </div>
+  </div>
+</section>
+<footer>
+  <div style="
+  background: #232d1f;
+  color: #7b8178;
+  font-size: 18px;
+  height: 22px;
+">&copy2024 All Rights Reserved. Developed By Dinatouch</div>
+</footer>
+</body>
+
 </html>
