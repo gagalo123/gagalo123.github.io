@@ -1,0 +1,14 @@
+#section02 {
+    background: transparent;
+    /*background: center / cover url("../img/section02_background.png");*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+#section02_text {
+    position: relative;
+    top: -120px;
+    width: 70vw;
+}
