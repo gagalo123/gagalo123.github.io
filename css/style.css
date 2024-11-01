@@ -1,0 +1,65 @@
+@import "header.css";
+@import "section00.css";
+@import "section01.css";
+@import "section02.css";
+@import "section03.css";
+@import "section04.css";
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: url("../img/section02_background.png") fixed  center no-repeat;
+  background-size: cover;
+  /*background: #2ea8ee;*/
+}
+
+section {
+  width: 100vw;
+  display: flex;
+  height: calc(100vh - 100px);
+  justify-content: center;
+}
+section:nth-child(odd) {
+  background: #fa6c98;
+}
+section:nth-child(even) {
+  background: #79edfc;
+}
+
+
+footer {
+  background: #000000;
+  color: #7b8178;
+  font-size: 18px;
+  height: 22px;
+}
+
+
+
+
+@media screen and (max-width: 860px) {
+
+
+
+
+
+  footer{
+    background: #000000;
+    color: #7b8178;
+    font-size: 14px;
+    height: 14px;
+  }
+
+
+}
